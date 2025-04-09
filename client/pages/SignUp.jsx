@@ -56,10 +56,10 @@ function SignUp() {
 
 
   return (
-    <div className='max-w-lg mx-auto p-3'>
+    <div className='max-w-lg mx-auto p-3 mt-5'>
       <h1 className='text-3xl font-semibold text-center hover:opacity-75'>Register</h1>
 
-      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-4 mt-5'>
         <input className='border rounded p-3' type="text" placeholder='username' id='username' onChange={handleChange} />
         <input className='border rounded p-3' type="email" placeholder='email' id='email' onChange={handleChange} />
         <input type='password' placeholder='password' className='border p-3 rounded-lg' id='password' onChange={handleChange} />
