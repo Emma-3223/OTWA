@@ -34,7 +34,7 @@ function SignUp() {
           // Sending to the backend
           body: JSON.stringify(formData),
         });
-      setLoading
+     
       const data = await res.json();
       if (data.success === false) {
         setError(data.message);

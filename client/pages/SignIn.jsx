@@ -27,7 +27,7 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      dispatch(signInStart)
+      dispatch(signInStart())
       // fetch: can be put,delete,get and post
       const res = await fetch('/api/auth/signin',
         {

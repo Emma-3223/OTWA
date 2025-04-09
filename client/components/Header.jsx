@@ -14,7 +14,7 @@ function Header() {
                     </h1>
                 </Link>
 
-                <form className='bg-slate-100 flex items-center sm:text-red p-3' >
+                <form className='bg-slate-100 px-3 rounded flex items-center sm:text-red p-1' >
                     <input type="text" action="" placeholder='Search...' className='bg-transparent focus:outline-none w-24 sm:w-64 rounded-sm' />
                     <FaSearch className='text-slate-300' />
                 </form>
