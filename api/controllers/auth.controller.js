@@ -43,7 +43,7 @@ export const signin = async (req, res, next) => {
 
 export const google = async (req, res, next) => {
   try {
-    const user = await User.findOne({email: req.body.email})
+    const user = await User.findOne({ email: req.body.email })
     if (user) {
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
       const { password: pass, ...rest } = user._doc
@@ -63,14 +63,21 @@ export const google = async (req, res, next) => {
         email: req.body.email,
         password: hashedPassword,
         avatar: req.body.photo
+
       })
+
       await newUser.save()
+   
+
       const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET)
       const { password: pass, ...rest } = newUser._doc
       res
         .cookie('access_token', token, { httpOnly: true })
         .status(200)
         .json(rest)
+
     }
-  } catch (error) {}
+  
+
+  } catch (error) { }
 }

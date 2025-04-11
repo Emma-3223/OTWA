@@ -48,7 +48,7 @@ function SignUp() {
 
   return (
     <div className='max-w-lg mx-auto p-3 mt-5'>
-      <h1 className='text-3xl font-semibold text-center hover:opacity-75'>
+      <h1 className='text-xl font-semibold text-center hover:opacity-75'>
         Register
       </h1>
 
@@ -86,7 +86,7 @@ function SignUp() {
       <div className='flex gap-3 mt-4'>
         <p>Have an account?</p>
         <Link to='/sign-in'>
-          <span className='text-blue-700'>Sign in</span>
+          <span className='text-blue-700 underline'>Sign in</span>
         </Link>
       </div>
       {error && (
